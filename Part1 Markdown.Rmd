@@ -46,3 +46,10 @@ eval(dg_dz)
 
 I am hungry :P
 
+# Git and Github
+## Notes
+
+- An M in the Git frame indicates that the document has been modified since last backed up to Git
+
+- Staging a file will send it to Git! 
+
