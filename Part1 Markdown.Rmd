@@ -25,12 +25,10 @@ my_derivative
 x <- 2.8
 eval(my_derivative)
 ```
+
 We are given the value (39.2) and the slope (28). The derivative the slope, so f'(2.8)=28
 
-
-
 Find the slope of $g(z) = 2z^3 - 10.5z^2+4.1$
-
 
 ```{r}
 gz <- expression((2* z ^3) - (10.5* z ^ 2) + 4.1)
@@ -47,9 +45,15 @@ eval(dg_dz)
 I am hungry :P
 
 # Git and Github
+
 ## Notes
 
-- An M in the Git frame indicates that the document has been modified since last backed up to Git
+-   An M in the Git frame indicates that the document has been modified since last backed up to Git
 
-- Staging a file will send it to Git! 
+### how to save to Git/Github
 
+-   Staging a file will send it to Git!
+
+-   'commit' will save to Git
+
+-   'push' (green arrow) will send to Github

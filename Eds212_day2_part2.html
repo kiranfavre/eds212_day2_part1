@@ -13,7 +13,7 @@
 
 <meta name="date" content="2022-08-02" />
 
-<title>EDS212 Day2 Part 1- Derivatives and Git intro</title>
+<title>Penguins</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -363,72 +363,14 @@ pre code {
 
 
 
-<h1 class="title toc-ignore">EDS212 Day2 Part 1- Derivatives and Git
-intro</h1>
+<h1 class="title toc-ignore">Penguins</h1>
 <h4 class="author">Kiran Favre</h4>
 <h4 class="date">2022-08-02</h4>
 
 </div>
 
 
-<div id="derivatives-in-r" class="section level2">
-<h2>Derivatives in R</h2>
-<p>Find the derivative of <span class="math display">\[f(x) =
-5x^2\]</span></p>
-<pre class="r"><code>##example 1 of finding derivatives using R
-ex_1  &lt;-  expression(5 * x ^2)
 
-my_derivative &lt;- deriv(ex_1, &quot;x&quot;)
-my_derivative </code></pre>
-<pre><code>## expression({
-##     .value &lt;- 5 * x^2
-##     .grad &lt;- array(0, c(length(.value), 1L), list(NULL, c(&quot;x&quot;)))
-##     .grad[, &quot;x&quot;] &lt;- 5 * (2 * x)
-##     attr(.value, &quot;gradient&quot;) &lt;- .grad
-##     .value
-## })</code></pre>
-<pre class="r"><code># I want to find a slope at x = 2.8
-
-x &lt;- 2.8
-eval(my_derivative)</code></pre>
-<pre><code>## [1] 39.2
-## attr(,&quot;gradient&quot;)
-##       x
-## [1,] 28</code></pre>
-<p>We are given the value (39.2) and the slope (28). The derivative the
-slope, so f’(2.8)=28</p>
-<p>Find the slope of <span class="math inline">\(g(z) = 2z^3 -
-10.5z^2+4.1\)</span></p>
-<pre class="r"><code>gz &lt;- expression((2* z ^3) - (10.5* z ^ 2) + 4.1)
-dg_dz &lt;- D(gz, &quot;z&quot;)
-dg_dz</code></pre>
-<pre><code>## 2 * (3 * z^2) - 10.5 * (2 * z)</code></pre>
-<pre class="r"><code>#let&#39;s evaluate the slope over a range of values
-z &lt;- seq(from = -3, to= 4, by = 0.5)
-
-#evaluate derivative at the range of values
-eval(dg_dz)</code></pre>
-<pre><code>##  [1] 117  90  66  45  27  12   0  -9 -15 -18 -18 -15  -9   0  12</code></pre>
-<p>I am hungry :P</p>
-</div>
-<div id="git-and-github" class="section level1">
-<h1>Git and Github</h1>
-<div id="notes" class="section level2">
-<h2>Notes</h2>
-<ul>
-<li>An M in the Git frame indicates that the document has been modified
-since last backed up to Git</li>
-</ul>
-<div id="how-to-save-to-gitgithub" class="section level3">
-<h3>how to save to Git/Github</h3>
-<ul>
-<li><p>Staging a file will send it to Git!</p></li>
-<li><p>‘commit’ will save to Git</p></li>
-<li><p>‘push’ (green arrow) will send to Github</p></li>
-</ul>
-</div>
-</div>
-</div>
 
 
 
