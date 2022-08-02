@@ -11,3 +11,25 @@ library(tidyverse)
 library(palmerpenguins)
 ```
 
+Examples of printing lines of data from data frame
+
+```{r}
+head(penguins)
+
+# or glimpse(penguins)
+```
+
+
+## Scatter plot of body mass versus flipper length
+
+```{r}
+#must start with ggplot, tell it what data set to use and which x and y you are interested in, and then tell it the geometry
+#now we want to make each type of penguin a certain color by giving geom_point an input
+
+ggplot(data= penguins, aes(x = body_mass_g, y = flipper_length_mm))  + geom_point(aes(color = species))
+
+
+```
+aes inputs are specific to changing the VARIABLES within a data set, if you want to make a change to the whole data set then it should be outside the aes function. Make sure if it is referencing a variable, include in aes and if nnot, outside of aes
+
+
