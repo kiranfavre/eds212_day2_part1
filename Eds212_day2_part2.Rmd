@@ -35,4 +35,5 @@ ggplot(data= penguins, aes(x = body_mass_g, y = flipper_length_mm))  + geom_poin
 
 - aes inputs are specific to changing the VARIABLES within a data set, if you want to make a change to the whole data set then it should be outside the aes function. Make sure if it is referencing a variable, include in aes and if nnot, outside of aes
 
+- here to make a change to practice using git and terminals
 
